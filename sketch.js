@@ -102,3 +102,15 @@ var b = function(p){
 }
 
 var dvd = new p5(b, "c2")
+
+var c = function(p){
+  p.setup=function() {
+    p.createCanvas(1000,1000)
+  }
+
+  p.draw=function() {
+    p.background(64, 224, 208)
+  }
+}
+
+var windowsxpLag = new p5(c, 'c3')
