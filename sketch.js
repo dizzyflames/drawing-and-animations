@@ -66,7 +66,7 @@ var a = function(p){
   }
 }
 
-var cycle = new p5(a, 'c1')
+var cycle = new p5(a, 'c1');
 
 // that nostalgic dvd screensaver with the bouncing ellipse
 var b = function(p){
@@ -101,16 +101,35 @@ var b = function(p){
   }
 }
 
-var dvd = new p5(b, "c2")
+var dvd = new p5(b, "c2");
 
 var c = function(p){
   p.setup=function() {
-    p.createCanvas(1000,1000)
+    p.createCanvas(1000,800);
+    p.frameRate(600);
+    p.background(136, 182, 241);
+
+    // taskbar
+    p.fill(36, 94, 220);
+    p.rect(0, 770, 1000, 30);
+    p.fill(61, 151, 55);
+    p.rect(0,770, 100, 200);
+    p.fill(29,146,225);
+    p.rect(850,770, 150,200);
+    
   }
 
   p.draw=function() {
-    p.background(64, 224, 208)
+    // windows
+    p.fill(238, 236, 221);
+    p.rect(p.mouseX, p.mouseY, 200, 100);
+    p.fill(4, 83, 245);
+    p.rect(p.mouseX, p.mouseY, 200, 10);
+    p.rect(p.mouseX + 170, p.mouseY, 10, 10);
+    p.rect(p.mouseX + 180, p.mouseY, 10, 10);
+    p.fill(203, 48, 30);
+    p.rect(p.mouseX + 190, p.mouseY, 10, 10);
   }
 }
 
-var windowsxpLag = new p5(c, 'c3')
+var windowsxpLag = new p5(c, 'c3');
