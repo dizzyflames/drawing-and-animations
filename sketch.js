@@ -120,15 +120,17 @@ var c = function(p){
   }
 
   p.draw=function() {
-    // windows
-    p.fill(238, 236, 221);
-    p.rect(p.mouseX, p.mouseY, 200, 100);
-    p.fill(4, 83, 245);
-    p.rect(p.mouseX, p.mouseY, 200, 10);
-    p.rect(p.mouseX + 170, p.mouseY, 10, 10);
-    p.rect(p.mouseX + 180, p.mouseY, 10, 10);
-    p.fill(203, 48, 30);
-    p.rect(p.mouseX + 190, p.mouseY, 10, 10);
+    if(p.mouseX > 0 && p.mouseY > 0) {
+      // windows
+      p.fill(238, 236, 221);
+      p.rect(p.mouseX, p.mouseY, 200, 100);
+      p.fill(4, 83, 245);
+      p.rect(p.mouseX, p.mouseY, 200, 10);
+      p.rect(p.mouseX + 170, p.mouseY, 10, 10);
+      p.rect(p.mouseX + 180, p.mouseY, 10, 10);
+      p.fill(203, 48, 30);
+      p.rect(p.mouseX + 190, p.mouseY, 10, 10);
+    }
   }
 }
 
